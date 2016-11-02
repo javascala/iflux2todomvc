@@ -8,6 +8,8 @@ import {
 } from 'react-native';
 import ListItem from './list-item';
 
+import {toJS} from 'immutable';
+
 import {todoQL} from '../ql';
 import {Relax} from 'iflux2'
 
@@ -37,7 +39,7 @@ export default class TodoList extends Component {
   }
 
   _renderRow = ({id, text, done}: Object, _:string, index:number) => {
-    return (<ListItem id={id} text={text} done={done} key={index}/>);
+    return (<ListItem id={id} text={text} done={done} key={index} index={index}/>);
   };
 }
 

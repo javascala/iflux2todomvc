@@ -26,8 +26,9 @@ export default class TextEditor extends Component {
 
   static defaultProps = {
     value: valueQL,
-    submit: noop,
-    changeValue: noop
+    addTodo: noop,
+    changeValue: noop,
+    submit: noop
   };
 
   render() {
@@ -50,7 +51,7 @@ export default class TextEditor extends Component {
 
 
   _handleEndEditing = (e:Object) => {
-    this.props.submit(e.nativeEvent.text);
+    this.props.addTodo(e.nativeEvent.text);
   };
 }
 

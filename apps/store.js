@@ -27,9 +27,10 @@ export default class AppStore extends Store {
   };
 
 
-  submit = () => {
+  addTodo = () => {
     const value = this.state().get('value');
-    this.dispatch('submit', value);
+    this.dispatch('addTodo', value);
+    this.dispatch('submit')
   };
 
 

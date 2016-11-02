@@ -13,7 +13,7 @@ export default class TextActor extends Actor {
   }
 
   @Action('submit')
-  submit(state, value) {
+  submit(state) {
     return state.set('value', '')
   }
 

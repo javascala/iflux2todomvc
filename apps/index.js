@@ -8,17 +8,21 @@ import AppStore from './store';
 import {StoreProvider} from 'iflux2'
 
 import TextEditor from './components/text-editor';
-import ActionList from './component/action-list';
-import TodoList from './component/todo-list';
+import ActionList from './components/action-list';
+import TodoList from './components/todo-list';
 
 @StoreProvider(AppStore, {debug: true})
 export default class TodoMVC extends Component {
+  constructor(props:Object) {
+    super(props);
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <TextEditor value={ inputValue }/>
-        <ActionList filter={filter}/>
-        <TodoList store={ store }/>
+        <TextEditor/>
+        <ActionList/>
+        <TodoList/>
       </View>
     );
   }

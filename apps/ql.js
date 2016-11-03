@@ -13,10 +13,14 @@ export const valueQL = QL('valueQL', ['value', (value) => value]);
  */
 export const todoQL = QL('todoQL', ['todos', 'filter',
   (todos, filter) => {
+    if(__DEV__) {
+      console.log('')
+    }
+
     if (filter === '') {
       return todos
     }
-    const done = filterStatus === 'completed' ? true : false;
+    const done = (filter === 'Activity')
     return todos.filter(val => val.get('done') === done)
   }
 ]);

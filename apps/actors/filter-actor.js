@@ -12,10 +12,4 @@ export default class FilterActor extends Actor {
   changeFilter(state, filter) {
     state.set('filter', filter);
   }
-
-  
-  @Action("init")
-  init(state, {filter}){
-    state.set('filter', filter);
-  }
 }

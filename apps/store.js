@@ -35,7 +35,7 @@ export default class AppStore extends Store {
 
 
   changeFilter = (status) => {
-    this.dispatch('filter', status);
+    this.dispatch('changeFilter', status);
   };
 
 

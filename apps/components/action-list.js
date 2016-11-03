@@ -39,7 +39,7 @@ export default class ActionList extends Component {
 
         <TouchableOpacity
           style={styles.filterIterm}
-          onPress={() => this.props.changeFilter("xxx")}>
+          onPress={() => this.props.changeFilter("Completed")}>
           <Text style={[styles.font, filter == 2 && {color: '#e63a59'}]}>
             Completed
           </Text>

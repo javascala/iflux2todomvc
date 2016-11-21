@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npm install ./react-dom"
   },
   "dependencies": {
-    "iflux2": "^1.2.1",
+    "iflux2": "1.2.6",
     "react": "15.3.2",
     "react-native": "0.36.0"
   },

@@ -2,6 +2,7 @@ import {QL, DQL} from 'iflux2';
 import {fromJS} from 'immutable';
 
 
+
 /**
  * 输入框的查询值
  */
